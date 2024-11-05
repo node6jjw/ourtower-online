@@ -40,8 +40,13 @@ export const loadProtos = async () => {
     // 모든 proto 파일들을 root 하위 Node에 로딩한다.
     await Promise.all(protoFiles.map((file) => root.load(file)));
 
+<<<<<<< HEAD
     for (const packetName of Object.values(packetNames)) {
       protoMessages[packetName] = root.lookupType(packetName);
+=======
+    for (const typeName of Object.values(packetNames)) {
+      protoMessages[typeName] = root.lookupType(typeName);
+>>>>>>> develop
     }
 
     console.log(protoMessages);
