@@ -115,6 +115,10 @@ message S2CAddEnemyTowerNotification {
 }
 
 message C2SSpawnMonsterRequest {
+    int32 monsterId = 1;
+    int32 monsterType = 2;
+    float x = 3;
+    float y = 4;
 }
 
 message S2CSpawnMonsterResponse {
